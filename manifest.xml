@@ -14,8 +14,8 @@
   <DisplayName DefaultValue="Droit Déconnexion"/>
   <Description DefaultValue="Complément Outlook — Droit à la déconnexion"/>
 
-  <IconUrl DefaultValue="https://dscoie091.sharepoint.com/sites/fd/DroitDeconnexion29012026/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://dscoie091.sharepoint.com/sites/fd/DroitDeconnexion29012026/assets/icon-80.png"/>
+  <IconUrl DefaultValue="https://github.com/DELLASIEGA101/DroitDeconnexion_WebAddin.git/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://github.com/DELLASIEGA101/DroitDeconnexion_WebAddin.git/assets/icon-80.png"/>
 
   <!-- Hôte Outlook -->
   <Hosts>
@@ -38,7 +38,7 @@
   </AppDomains>
 
   <!-- URL d’assistance REQUISE -->
-  <SupportUrl DefaultValue="https://dscoie091.sharepoint.com/sites/fd/DroitDeconnexion29012026/"/>
+  <SupportUrl DefaultValue="https://github.com/DELLASIEGA101/DroitDeconnexion_WebAddin.git"/>
 
   <!-- Commandes et taskpane -->
   <VersionOverrides xsi:type="ov:VersionOverridesV1_1">
@@ -69,13 +69,13 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="icon16" DefaultValue="https://dscoie091.sharepoint.com/sites/fd/DroitDeconnexion29012026/assets/icon-16.png"/>
-        <bt:Image id="icon32" DefaultValue="https://dscoie091.sharepoint.com/sites/fd/DroitDeconnexion29012026/assets/icon-32.png"/>
-        <bt:Image id="icon80" DefaultValue="https://dscoie091.sharepoint.com/sites/fd/DroitDeconnexion29012026/assets/icon-80.png"/>
+        <bt:Image id="icon16" DefaultValue="https://github.com/DELLASIEGA101/DroitDeconnexion_WebAddin.git/assets/icon-16.png"/>
+        <bt:Image id="icon32" DefaultValue="https://github.com/DELLASIEGA101/DroitDeconnexion_WebAddin.git/assets/icon-32.png"/>
+        <bt:Image id="icon80" DefaultValue="https://github.com/DELLASIEGA101/DroitDeconnexion_WebAddin.git/assets/icon-80.png"/>
       </bt:Images>
 
       <bt:Urls>
-        <bt:Url id="taskpaneUrl" DefaultValue="https://dscoie091.sharepoint.com/sites/fd/DroitDeconnexion29012026/src/taskpane.html"/>
+        <bt:Url id="taskpaneUrl" DefaultValue="https://github.com/DELLASIEGA101/DroitDeconnexion_WebAddin.git/src/taskpane.html"/>
       </bt:Urls>
 
       <bt:ShortStrings>
