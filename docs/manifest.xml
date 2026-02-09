@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:ov="http://schemas.microsoft.com/office/mailappversionoverrides/1.1"
+  xsi:type="MailApp">
+
+  <Id>ebc2a16a-62f6-4f4b-9852-10b4b48ad3f0</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>BDF</ProviderName>
+  <DefaultLocale>fr-FR</DefaultLocale>
+
+  <DisplayName DefaultValue="Droit Décennexion"/>
+  <Description DefaultValue="Complément Outlook pour le droit à la déconnexion."/>
+
+  <IconUrl DefaultValue="https://dellasiega101.github.io/DroitDeconnexion_WebAddin/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://dellasiega101.github.io/DroitDeconnexion_WebAddin/assets/icon-64.png"/>
+
+  <SupportUrl DefaultValue="https://dellasiega101.github.io/DroitDeconnexion_WebAddin/"/>
+
+  <AppDomains>
+    <AppDomain>https://dellasiega101.github.io</AppDomain>
+
+  </AppDomains>
+
+  <Hosts>
+    <Host Name="Mailbox"/>
+  </Hosts>
+
+  <Requirements>
+    <Sets>
+      <Set Name="Mailbox" MinVersion="1.8"/>
+    </Sets>
+  </Requirements>
+
+  <Permissions>ReadItem</Permissions>
+
+  <!-- 👇 Basculer le namespace par défaut ici est CRUCIAL -->
+  <VersionOverrides
+      xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1"
+      xsi:type="ov:VersionOverridesV1_1">
+
+    <Hosts>
+      <Host xsi:type="ov:MailHost">
+        <DesktopFormFactor>
+
+          <!-- Activation en lecture -->
+          <Rule xsi:type="RuleCollection" Mode="Or">
+            <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read"/>
+          </Rule>
+
+          <ExtensionPoint xsi:type="ov:MessageReadCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="grpDD">
+                <Label resid="grpLabel"/>
+                <Control xsi:type="ov:Button" id="btnDD">
+                  <Label resid="btnLabel"/>
+                  <Icon>
+                    <bt:Image size="16" resid="icon16"/>
+                    <bt:Image size="32" resid="icon32"/>
+                    <bt:Image size="80" resid="icon80"/>
+                  </Icon>
+                  <Action xsi:type="ov:ShowTaskpane">
+                    <SourceLocation resid="taskpaneUrl"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+
+    <Resources>
+      <bt:Images>
+        <bt:Image id="icon16" DefaultValue="https://dellasiega101.github.io/DroitDeconnexion_WebAddin/assets/icon-16.png"/>
+        <bt:Image id="icon32" DefaultValue="https://dellasiega101.github.io/DroitDeconnexion_WebAddin/assets/icon-32.png"/>
+        <bt:Image id="icon80" DefaultValue="https://dellasiega101.github.io/DroitDeconnexion_WebAddin/assets/icon-80.png"/>
+      </bt:Images>
+
+      <bt:Urls>
+        <bt:Url id="taskpaneUrl" DefaultValue="https://dellasiega101.github.io/DroitDeconnexion_WebAddin/src/taskpane.html"/>
+      </bt:Urls>
+
+      <bt:ShortStrings>
+        <bt:String id="grpLabel" DefaultValue="Droit à la Déconnexion"/>
+        <bt:String id="btnLabel" DefaultValue="Afficher le panneau"/>
+      </bt:ShortStrings>
+
+      <bt:LongStrings>
+        <bt:String id="tooltip" DefaultValue="Permet d'afficher le volet du droit à la déconnexion."/>
+      </bt:LongStrings>
+    </Resources>
+
+  </VersionOverrides>
+</OfficeApp>
